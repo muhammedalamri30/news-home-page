@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  max-width: 100vw;
 }
 
 input,
@@ -41,11 +42,13 @@ body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   background: var(--off-white);
-  overflow-x: hidden !important;
 }
-
+html,
+body {
+  overflow-x: clip;
+}
 .container {
-  max-width: 72rem; /* 1200px */
+  max-width: 72rem;
   margin: 0 auto;
   padding: 30px 20px 0;
 }
@@ -55,8 +58,12 @@ body {
   }
 }
 /* Navbar */
+header {
+  position: relative !important;
+}
 nav {
   display: flex;
+  overflow-x: hidden;
   justify-content: space-between;
   padding-top: 4.5rem !important; /* 55px */
 }
